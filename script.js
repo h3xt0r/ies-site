@@ -9,18 +9,22 @@ function cargarContenidoDesdeArchivo(archivo) {
         });
 }
 
-document.getElementById('quienesSomos').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('quienes_somos.html');
+document.getElementById('Soluciones').addEventListener('click', () => {
+    cargarContenidoDesdeArchivo('soluciones.html');
 });
 
-document.getElementById('queHacemos').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('que_hacemos.html');
+document.getElementById('Hardware').addEventListener('click', () => {
+    cargarContenidoDesdeArchivo('hardware.html');
 });
 
-document.getElementById('comoLoHacemos').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('como_lo_hacemos.html');
+document.getElementById('Financieros').addEventListener('click', () => {
+    cargarContenidoDesdeArchivo('finanzas/financieros.html');
 });
 
-document.getElementById('porqueDiferentes').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('porque_diferentes.html');
+document.getElementById('teoriaR').addEventListener('click', () => {
+    cargarContenidoDesdeArchivo('toc/toc.html');
+});
+
+document.getElementById('contacto').addEventListener('click', () => {
+    cargarContenidoDesdeArchivo('contacto.html');
 });
