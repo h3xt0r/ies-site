@@ -13,6 +13,10 @@ document.getElementById('Soluciones').addEventListener('click', () => {
     cargarContenidoDesdeArchivo('soluciones.html');
 });
 
+document.getElementById('Soluciones').addEventListener('touchcancel', () => {
+    cargarContenidoDesdeArchivo('soluciones.html');
+})
+
 document.getElementById('Hardware').addEventListener('click', () => {
     cargarContenidoDesdeArchivo('hardware.html');
 });
