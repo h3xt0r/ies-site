@@ -9,26 +9,44 @@ function cargarContenidoDesdeArchivo(archivo) {
         });
 }
 
-document.getElementById('Soluciones').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('soluciones.html');
-});
+function agregarEventos(elementoId, archivo) {
+    const elemento = document.getElementById(elementoId);
+    
+    function cargarContenido() {
+        cargarContenidoDesdeArchivo(archivo);
+    }
 
-document.getElementById('Soluciones').addEventListener('touchcancel', () => {
-    cargarContenidoDesdeArchivo('soluciones.html');
-})
+    // Agregar los eventos 'click' y 'touchstart'
+    elemento.addEventListener('click', cargarContenido);
+    elemento.addEventListener('touchstart', cargarContenido);
+}
 
-document.getElementById('Hardware').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('hardware.html');
-});
+agregarEventos('Soluciones', 'soluciones.html');
+agregarEventos('Hardware', 'hardware.html');
+agregarEventos('Financieros', 'finanzas/financieros.html');
+agregarEventos('teoriaR', 'toc/toc.html');
+agregarEventos('contacto', 'contacto.html');
 
-document.getElementById('Financieros').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('finanzas/financieros.html');
-});
+// document.getElementById('Soluciones').addEventListener('click', () => {
+//     cargarContenidoDesdeArchivo('soluciones.html');
+// });
 
-document.getElementById('teoriaR').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('toc/toc.html');
-});
+// document.getElementById('Soluciones').addEventListener('touchcancel', () => {
+//     cargarContenidoDesdeArchivo('soluciones.html');
+// })
 
-document.getElementById('contacto').addEventListener('click', () => {
-    cargarContenidoDesdeArchivo('contacto.html');
-});
+// document.getElementById('Hardware').addEventListener('click', () => {
+//     cargarContenidoDesdeArchivo('hardware.html');
+// });
+
+// document.getElementById('Financieros').addEventListener('click', () => {
+//     cargarContenidoDesdeArchivo('finanzas/financieros.html');
+// });
+
+// document.getElementById('teoriaR').addEventListener('click', () => {
+//     cargarContenidoDesdeArchivo('toc/toc.html');
+// });
+
+// document.getElementById('contacto').addEventListener('click', () => {
+//     cargarContenidoDesdeArchivo('contacto.html');
+// });
